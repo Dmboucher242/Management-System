@@ -106,3 +106,36 @@ function viewRoles() {
             })
         })
 }
+
+// function viewEmployees() {
+ //show a list of all of the employees in the data
+
+ // function for adding new departments
+
+ //function for adding new roles
+
+ function addEmployees() {
+     inquirer
+     .prompt(
+         {
+            type: "input",
+            name: "first name",
+            message: "What is the employees first name?"
+         },
+         {
+             type: "input",
+             name: "last name",
+             message: "What is the employees last name?"
+         },
+         {
+             type: "input",
+             name: "role",
+             message: "What is the employees role?"
+         },
+         {
+             type: "input",
+             name: "manager",
+             message: "Who is the employees manager?"
+         }
+     )
+ }
