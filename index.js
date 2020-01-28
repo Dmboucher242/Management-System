@@ -55,14 +55,37 @@ function runSearch() {
                 case "Update Employee Roles":
                     updateEmployeeRoles();
                     break;
-
             }
         })
-
-
-
-
-
 };
 
+function viewDepartments() {
+    inquirer
+        .prompt({
+            type: "list",
+            name: "departments",
+            message: "Which department would you like to view?",
+            choices: [
+                "Sales",
+                "Engineering",
+                "Finance",
+                "Legal",
+            ]
+        })
+        .then(function (answer) {
+            const query = "SELECT department FROM cms_db";
+            connection.query(query, { department: answer.department }, function (err, res) {
+                for (var i = 0; i < res.length; i++) {
+                    console.log(department)
+                }
+            })
+        })
+};
 
+function viewRoles() {
+    inquirer
+        .prompt({
+            type: "list",
+            name:
+        })
+}
