@@ -86,6 +86,23 @@ function viewRoles() {
     inquirer
         .prompt({
             type: "list",
-            name:
+            name: "roles",
+            message: "Which roles would you like to view?",
+            choices: [
+                "Sales Lead",
+                "Sales Person",
+                "Lead Engineer",
+                "Lawyer",
+                "Accountant",
+                "Legal Team Lead"
+            ]
+        })
+        .then(function (answer) {
+            const query = "SELECT role FROM cms_db";
+            connection.query(query, { role: answer.role }, function (err, res) {
+                for (var i = 0; i < res.length; i++) {
+                    console.log(role)
+                }
+            })
         })
 }
