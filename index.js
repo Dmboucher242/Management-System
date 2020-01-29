@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
     database: "cms_db"
 });
 
-connection.contact(function (err) {
+connection.connect(function (err) {
     if (err) throw err;
     runSearch();
 });
