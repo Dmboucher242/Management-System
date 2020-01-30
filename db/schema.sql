@@ -8,3 +8,17 @@ CREATE TABLE department (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(30) UNIQUE NOT NULL
 );
+
+CREATE TABLE roles (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(30),
+    salary DECIMAL,
+    department_id INT
+);
+
+CREATE TABLE employee (
+	first_name VARCHAR(30),
+    last_name VARCHAR(30),
+    role VARCHAR(30),
+    manager_id INT 
+);
