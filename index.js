@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 
 const connection = mysql.createConnection({
     host: "localhost",
-    port: "3306",
+    port: 3306,
     user: "root",
     password: "bubba242",
     database: "cms_db"
@@ -69,14 +69,15 @@ function viewDepartments() {
                 "Sales",
                 "Engineering",
                 "Finance",
-                "Legal",
+                "Legal"
             ]
         })
         .then(function (answer) {
-            const query = "SELECT department FROM cms_db";
-            connection.query(query, { department: answer.department }, function (err, res) {
+            const query = "SELECT * FROM cms_db.department";
+            connection.query(query, [answer.departments], function (err, res) {
+                console.log(res);
                 for (var i = 0; i < res.length; i++) {
-                    console.log(department)
+                    console.log(departments)
                 }
             })
         })
@@ -99,9 +100,9 @@ function viewRoles() {
         })
         .then(function (answer) {
             const query = "SELECT role FROM cms_db";
-            connection.query(query, { role: answer.role }, function (err, res) {
+            connection.query(query, { role: answer.roles }, function (err, res) {
                 for (var i = 0; i < res.length; i++) {
-                    console.log(role)
+                    console.log(roles)
                 }
             })
         })

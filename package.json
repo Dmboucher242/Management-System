@@ -1,0 +1,31 @@
+{
+  "name": "Management-System",
+  "version": "1.0.0",
+  "description": "## About A simple organization app that allows a business to manage departments as well as employees and their roles within a company.  ## Technologies * MySQL * Javascript * Node.js * Inquirer",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "inquirer": "^7.0.4",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node db/seed.sql",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmboucher242/Management-System.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmboucher242/Management-System/issues"
+  },
+  "homepage": "https://github.com/Dmboucher242/Management-System#readme"
+}
