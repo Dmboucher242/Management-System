@@ -139,4 +139,12 @@ function viewRoles() {
              message: "Who is the employees manager?"
          }
      )
+     .then(function (answer) {
+        const query = "SELECT employee FROM cms_db";
+        connection.query(query, { add: answer.firstname }, function (err, res) {
+            for (var i = 0; i < res.length; i++) {
+                console.log(addEmployees)
+            }
+        })
+    })
  }
